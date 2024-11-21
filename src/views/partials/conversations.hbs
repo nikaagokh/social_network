@@ -1,0 +1,71 @@
+<div class="notification-container">
+    <div class="notification-outer-flex">
+        <div class="notification-search-cont">
+            <div class="notification-search-wrapper">
+                <input type="text" id="notification-search-input" class="notification-search-input"
+                    placeholder="მომხმარებლის/ჩათების ძებნა">
+                <div class="notification-input-append">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <mask id="mask0_334_826" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="18" height="18">
+                            <rect width="18" height="18" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_334_826)">
+                            <path
+                                d="M2.25 13.4712V12.7212H9.41827V13.4712H2.25ZM2.25 9.87981V9.12981H5.59614V9.87981H2.25ZM2.25 6.28847V5.53847H5.59614V6.28847H2.25ZM15.2192 13.5L12.3029 10.6269C12.0317 10.8298 11.7373 10.9868 11.4195 11.0978C11.1017 11.2089 10.776 11.2644 10.4423 11.2644C9.60033 11.2644 8.88263 10.9733 8.28919 10.3911C7.69575 9.80889 7.39903 9.09759 7.39903 8.25722C7.39903 7.41683 7.69608 6.70553 8.29018 6.12332C8.88429 5.54111 9.60281 5.25 10.4457 5.25C11.2886 5.25 12.006 5.54111 12.5978 6.12332C13.1897 6.70553 13.4856 7.41442 13.4856 8.25C13.4856 8.58365 13.4301 8.90937 13.319 9.22716C13.2079 9.54496 13.0462 9.83463 12.8337 10.0962L15.75 12.9692L15.2192 13.5ZM10.4423 10.5144C11.0793 10.5144 11.6208 10.2957 12.0667 9.85817C12.5126 9.42067 12.7356 8.88702 12.7356 8.25722C12.7356 7.62741 12.5126 7.09375 12.0667 6.65625C11.6208 6.21875 11.0793 6 10.4423 6C9.80529 6 9.26383 6.21875 8.8179 6.65625C8.37199 7.09375 8.14903 7.62741 8.14903 8.25722C8.14903 8.88702 8.37199 9.42067 8.8179 9.85817C9.26383 10.2957 9.80529 10.5144 10.4423 10.5144Z"
+                                fill="#262626" fill-opacity="0.5" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="overlay-search"></div>
+            </div>
+        </div>
+        <div class="notification-desc">
+            <div class="notification-left">
+                <i class="material-symbols-outlined">forum</i>
+                <span>წარმატებულ მესიჯობას გისურვებთ! </span>
+
+            </div>
+
+        </div>
+        <div class="notification-wrapper">
+            {{#each conversations as |chat i|}}
+            <div class="notification-flex">
+                <h4>{{chat.name}}</h4>
+                <div class="notification-inner">
+                    <div class="notification-extend-flex">
+                        <div class="notification-extend-content">
+                            {{#each chat.conversations as |conversation i|}}
+                            <div class="notification-extend-item">
+                                <div class="flexing">
+                                    {{#compare chat.name '==' 'ჩათები'}}
+                                      <i class="material-symbols-outlined">group</i>
+                                    {{else}}
+                                      <i class="material-symbols-outlined">person</i>
+                                    {{/compare}}
+                                    <div class="notification-desc-name">{{conversation.name}}</div>
+                                </div>
+                                {{#compare chat.name '==' 'ჩათები'}}
+                                <button class="button button-icon open-chat-conversation" data-id="{{conversation.conversationId}}">
+                                    <i class="material-symbols-outlined">chat</i>
+                                </button>
+                                 
+                                {{else}}
+                                 <button class="button button-icon open-chat-user" data-id="{{conversation.id}}">
+                                    <i class="material-symbols-outlined">chat</i>
+                                </button>
+                    
+                                {{/compare}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>
+

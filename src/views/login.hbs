@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>აუტორიზაცია</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+    <div class="global-dialog-container">
+        <div class="auth-container">
+            <div class="header-auth">
+                <div class="header-desc">
+                    <h3>ფაილების გაზიარება</h3>
+                </div>
+                <div class="header-desc">სისტემაში შესვლით თქვენ შეძლებთ ნახოთ თქვენთან გაზიარებული ფაილები</div>
+            </div>
+            <div class="auth-body">
+                <div class="form">
+                    <div class="auth-phone-wrapper">
+                        <div class="auth-input-wrapper auth-phone">
+                            <label for="user-input" class="input-label">ტელეფონის ნომერი*</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="user-input" class="auth-input phone-input">
+                                <div class="phone-number-meta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_1622_58)">
+                                            <rect width="16" height="12" rx="2" fill="white" />
+                                            <path d="M0 0H16V12H0V0Z" fill="white" />
+                                            <path d="M6.8 0H9.2V12H6.8V0Z" fill="#FF3333" />
+                                            <path d="M0 4.8H16V7.2H0V4.8Z" fill="#FF3333" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M3.67 9.3275C3.695 8.9075 3.77 8.55 3.77 8.55C3.77 8.55 3.525 8.575 3.4 8.575C3.2775 8.575 3.03 8.55 3.03 8.55C3.03 8.55 3.105 8.9075 3.13 9.33C2.7075 9.305 2.35 9.23 2.35 9.23C2.35 9.23 2.375 9.415 2.375 9.6C2.375 9.785 2.35 9.97 2.35 9.97C2.35 9.97 2.7075 9.895 3.13 9.87C3.105 10.2925 3.03 10.65 3.03 10.65C3.03 10.65 3.215 10.625 3.4 10.625C3.585 10.625 3.77 10.65 3.77 10.65C3.77 10.65 3.695 10.2925 3.67 9.87C4.0925 9.895 4.45 9.97 4.45 9.97C4.45 9.97 4.425 9.725 4.425 9.6C4.425 9.4775 4.45 9.23 4.45 9.23C4.45 9.23 4.0925 9.305 3.6725 9.33L3.67 9.3275ZM12.87 2.1275C12.895 1.7075 12.97 1.35 12.97 1.35C12.97 1.35 12.725 1.375 12.6 1.375C12.4775 1.375 12.23 1.35 12.23 1.35C12.23 1.35 12.305 1.7075 12.33 2.1275C11.9075 2.1025 11.55 2.03 11.55 2.03C11.55 2.03 11.575 2.215 11.575 2.4C11.575 2.585 11.55 2.77 11.55 2.77C11.55 2.77 11.9075 2.695 12.33 2.67C12.305 3.0925 12.23 3.45 12.23 3.45C12.23 3.45 12.415 3.425 12.6 3.425C12.785 3.425 12.97 3.45 12.97 3.45C12.97 3.45 12.895 3.0925 12.87 2.6725C13.2925 2.6975 13.65 2.7725 13.65 2.7725C13.65 2.7725 13.625 2.5225 13.625 2.4C13.625 2.2775 13.65 2.03 13.65 2.03C13.65 2.03 13.2925 2.105 12.87 2.13V2.1275ZM3.67 2.1275C3.695 1.7075 3.77 1.35 3.77 1.35C3.77 1.35 3.525 1.375 3.4 1.375C3.2775 1.375 3.03 1.35 3.03 1.35C3.03 1.35 3.105 1.7075 3.13 2.13C2.7075 2.105 2.35 2.03 2.35 2.03C2.35 2.03 2.375 2.215 2.375 2.4C2.375 2.585 2.35 2.77 2.35 2.77C2.35 2.77 2.7075 2.695 3.13 2.67C3.105 3.0925 3.03 3.45 3.03 3.45C3.03 3.45 3.215 3.425 3.4 3.425C3.585 3.425 3.77 3.45 3.77 3.45C3.77 3.45 3.695 3.0925 3.67 2.67C4.0925 2.695 4.45 2.77 4.45 2.77C4.45 2.77 4.425 2.525 4.425 2.4C4.425 2.2775 4.45 2.03 4.45 2.03C4.45 2.03 4.0925 2.105 3.6725 2.13L3.67 2.1275ZM12.87 9.3275C12.895 8.9075 12.97 8.55 12.97 8.55C12.97 8.55 12.725 8.575 12.6 8.575C12.4775 8.575 12.23 8.55 12.23 8.55C12.23 8.55 12.305 8.9075 12.33 9.33C11.9075 9.305 11.55 9.23 11.55 9.23C11.55 9.23 11.575 9.415 11.575 9.6C11.575 9.785 11.55 9.97 11.55 9.97C11.55 9.97 11.9075 9.895 12.33 9.87C12.305 10.2925 12.23 10.65 12.23 10.65C12.23 10.65 12.415 10.625 12.6 10.625C12.785 10.625 12.97 10.65 12.97 10.65C12.97 10.65 12.895 10.2925 12.87 9.87C13.2925 9.895 13.65 9.97 13.65 9.97C13.65 9.97 13.625 9.725 13.625 9.6C13.625 9.4775 13.65 9.23 13.65 9.23C13.65 9.23 13.2925 9.305 12.87 9.33V9.3275Z"
+                                                fill="#FF3333" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1622_58">
+                                                <rect width="16" height="12" rx="2" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>+995</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button" id="oneTimeCode">
+                            კოდის გაგზავნა
+                        </button>
+                    </div>
+                    <div class="auth-verify-number">
+                        <div class="auth-input-wrapper">
+                            <label for="user-input" class="input-label">ერთჯერადი კოდი</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="user-otp-code" class="auth-input otp-input" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-input-wrapper">
+                        <label for="user-password" class="input-label">პაროლი*</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="user-password" class="auth-input" autocomplete="off">
+                            <button class="button button-icon eye-on" id="eyeOn">
+                               
+                                <i class="material-symbols-outlined eye-icon">visibility</i>
+                                <div class="tooltip">პაროლის ჩვენება</div>
+                            </button>
+                            <button class="button button-icon eye-off" id="eyeOff" style="display: none;">
+                                <i class="material-symbols-outlined eye-icon">visibility_off</i>
+                                <div class="tooltip">პაროლის დაფარვა</div>
+                            </button>
+                        </div>
+
+                    </div>
+                   
+                    <div class="error-message">აუცილებელია ყველა ველის შევსება*</div>
+                    <button class="button auth-button" id="submitButton">
+                        შესვლა
+                    </button>
+                    <a href="/verify" class="button reg-button" id="regButton">
+                        რეგისტრაცია
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-container"></div>
+    <div class="toast-container"></div>
+    <script src="/public/js/login.js" type="module"></script>
+</body>
+
+</html>

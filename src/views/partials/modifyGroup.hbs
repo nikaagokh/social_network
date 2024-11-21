@@ -1,0 +1,67 @@
+<div class="addGroup-container">
+    <div class="contacts-header">
+        <button class="button button-icon display-bn" id="accBackButton">
+            <i class="material-symbols-outlined">chevron_left</i>
+        </button>
+        <span>ჯგუფის მოდიფიკაცია</span>
+        <span class="material-symbols-outlined">beenhere</span>
+    </div>
+    <div class="group-modify-content">
+
+        <div class="group-select-container">
+            <label>ჯგუფები</label>
+            <div class="custom-select" name="model" id="allGroupWrapper">
+                <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox"
+                    aria-expanded="false" aria-controls="listbox" id="allGroup">
+                    <span class="select-value">--აირჩიე--ჯგუფი</span>
+                    <i class="material-symbols-outlined">arrow_drop_down</i>
+                </button>
+                <ul role="listbox" id="allGroupList" class="select-dropdown">
+                    {{#each conversations as |conversation i|}}
+                    <li role="option" class="language-listitem list-item" value="{{this.id}}">
+
+                        <i class="material-symbols-outlined">group</i>
+                        <span class="list-item-content" style="align-self: unset;">{{this.name}}</span>
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="group-name-container">
+            <div class="auth-input-wrapper grop-add-input-wrapper">
+                <label for="user-mail" class="input-label user-label">ჯგუფის სახელი</label>
+                <div class="input-wrapper">
+                    <input type="text" id="modifyGroupName" class="auth-input">
+                    <div class="input-group-append">
+                        <i class="material-symbols-outlined">group</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group-select-container">
+            <label>მონაწილე</label>
+            <div class="custom-select" id="deleteUserWrapper">
+                <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox"
+                    aria-expanded="false" aria-controls="listbox" id="deleteUser">
+                    <span class="select-value">--წაშალე მონაწილე--</span>
+                    <i class="material-symbols-outlined">arrow_drop_down</i>
+                </button>
+                <ul role="listbox" id="deleteUserList" class="select-dropdown" aria-multiselectable="true"></ul>
+            </div>
+        </div>
+        <div class="group-select-container">
+            <label>ადმინი</label>
+            <div class="custom-select" id="modifyAdminWrapper">
+                <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox"
+                    aria-expanded="false" aria-controls="listbox" id="modifyAdmin">
+                    <span class="select-value">--შეცვალე ადმინი--</span>
+                    <i class="material-symbols-outlined">arrow_drop_down</i>
+                </button>
+                <ul role="listbox" id="modifyAdminList" class="select-dropdown"></ul>
+            </div>
+        </div>
+        <button class="button" id="modifyGroupButton">დამატება</button>
+        <div class="modifyGroup-hydration" style="display: none;">{{hydration}}</div>
+    </div>
+</div>

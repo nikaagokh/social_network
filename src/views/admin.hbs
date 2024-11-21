@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+   
+    <div class="app-container">
+
+    <div class="account-container">
+        
+        <div class="account-wrapper-desk admin-wrapper-desk display-nb">
+            <div class="account-list">
+                <a href="/admin/about" class="account-listitem list-divider {{#if showAbout}}account-active{{/if}}" id="accPrivacyDesk">
+                    <i class="material-symbols-outlined">perm_identity</i>
+                    პირადი ინფორმაცია
+                </a>
+                <a href="/admin/password" class="account-listitem list-divider {{#if showPassword}}account-active{{/if}}" id="accPassDesk">
+                    <i class="material-symbols-outlined">lock_open</i>
+                    პაროლის ცვლილება
+                </a>
+                <a href="/admin/contacts" class="account-listitem list-divider {{#if showContacts}}account-active{{/if}}" id="accContacts">
+                    <i class="material-symbols-outlined">contact_page</i>
+                    კონტაქტები
+                </a>
+                <a href="/admin/relations" class="account-listitem list-divider {{#if showRelations}}account-active{{/if}}" id="accRelations">
+                    <i class="material-symbols-outlined">explore</i>
+                    ურთიერთობები
+                </a>
+                 
+                <a href="/admin/blocks" class="account-listitem list-divider {{#if showBlocks}}account-active{{/if}}" id="accBlocks">
+                    <i class="material-symbols-outlined">block</i>
+                    დაბლოკილები
+                </a>
+                <a href="/admin/add-group" class="account-listitem list-divider {{#if showGroupAdd}}account-active{{/if}}">
+                    <i class="material-symbols-outlined">group_add</i>
+                    ჯგუფის დამატება
+                </a>
+                <a href="/admin/modify-group" class="account-listitem list-divider {{#if showGroupModify}}account-active{{/if}}">
+                   <i class="material-symbols-outlined">group_remove</i>
+                   ჯგუფის მოდიფიკაცია
+                </a>
+                <div class="account-listitem" id="accLogout">
+                    <i class="material-symbols-outlined">exit_to_app</i>
+                    გასვლა
+                </div>
+            </div>
+        </div>
+        <div class="account-content admin-content">
+            {{#if showAbout}}
+              {{> about}}
+            {{/if}}
+            {{#if showPassword}}
+              {{> changePass}}
+            {{/if}}
+            {{#if showRelations}}
+               {{> relations }}
+            {{/if}}
+            {{#if showContacts}}
+               {{> contacts}}
+            {{/if}}
+            {{#if showBlocks}}
+               {{> blocks}}
+            {{/if}}
+            {{#if showGroupAdd}}
+               {{> addGroup}}
+            {{/if}}
+            {{#if showGroupModify}}
+               {{> modifyGroup}}
+            {{/if}}
+        </div>
+    </div>
+    </div>
+    <div class="overlay-container"></div>
+    <div class="toast-container"></div>
+    <script src="/public/js/account.js" type="module"></script>
+</body>

@@ -1,0 +1,28 @@
+<div class="blocks-container">
+    <div class="blocks-header">
+        <button class="button button-icon display-bn" id="accBackButton">
+            <i class="material-symbols-outlined">chevron_left</i>
+        </button>
+        <span>დაბლოკილები</span>
+        <span class="material-symbols-outlined">beenhere</span>
+    </div>
+    <div class="blocks-content">
+        {{#notEmpty blocks}}
+        {{#each blocks}}
+        <div class="header__input-list-item list-divider" tabindex="0" data-link="">
+            <i class="material-symbols-outlined" style="font-size: 2.5rem;">person</i>
+            <span class="header__input-list-content">
+                <h4 class="header__input-list-title">{{this.name}}</h4>
+                <p class="header__input-list-price">{{this.date}} {{this.time}}</p>
+            </span>
+            <button class="button button-icon unblock-buttons" data-id="{{this.id}}">
+                <i class="material-symbols-outlined">hide_source</i>
+            </button>
+        </div>
+        {{/each}}
+        {{else}}
+        დაბლოკილების სია ცარიელია !
+        {{/notEmpty}}
+    </div>
+</div>
+<script src="/public/js/blocks.js" type="module"></script>
